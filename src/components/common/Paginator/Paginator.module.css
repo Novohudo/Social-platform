@@ -1,0 +1,30 @@
+.divList{
+ list-style-type: none;
+ display: flex;
+ flex-direction: row;
+ height: 50px;
+ margin-left: 30px;
+}
+.divList li{
+ background-color: rgba(0, 0, 0, 0.336);
+ margin: 2px;
+ text-align: center;
+ width: 35px;
+ height:35px;
+ font-size:25px;
+ border: 5px solid rgba(0, 0, 0, 0.082);
+ border-radius:100%;
+}
+.divList li:hover{
+ color: gold;
+}
+.selectedPage{
+ color: gold;
+ font-weight: bold;
+
+}
+.divList button{
+ color: gold;
+ background-color: rgba(0, 0, 0, 0.336);
+ border-radius:100%;
+}

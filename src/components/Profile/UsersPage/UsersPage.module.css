@@ -1,0 +1,34 @@
+.content{
+color:gold;
+display: flex;
+text-align: center;
+justify-content: center;
+}
+.userPage{
+  background-color: rgba(0, 0, 0, 0.445);
+  width: 100%;
+  height: 100vh;
+}
+.userPage p{
+  font-size:20px;
+  padding: 15px;
+  border-bottom: 1px solid gold;
+}
+.subscriberData{
+  border-radius: 20px;
+}
+.userImage{
+  height: 200px;
+  border-radius:50%
+}
+.Userstatus{
+  height: 40px;
+  width: 300px;
+  margin-left: 520px;
+  background-color: rgba(0, 0, 0, 0.166);
+  border-radius: 10px;
+}
+.profile_props{
+  display: flex;
+  flex-direction: column;
+}

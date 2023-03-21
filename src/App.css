@@ -1,0 +1,32 @@
+
+.App_wrapper{
+  
+  display: grid;
+  
+  grid-template-areas: 
+  "h h"
+  "n c ";
+  grid-template-rows: 70px 1fr ;
+  grid-template-columns: 200px 7fr;
+  grid-gap:3px;
+  height: 100vh;
+  /* width: 110%; */
+  background-image: url('https://cdn.wallpapersafari.com/95/13/YoDpWc.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow: auto;
+  
+  
+}
+.App_wrapper__content{
+  
+  background-color: rgba(0, 0, 0, 0.555);
+}
+
+
+
+
+
+
+
+
