@@ -10,8 +10,6 @@ let initialState = {
 		{ id: 1, message: "hi,how are you?", likesCount: 0 },
 		{ id: 2, message: "Geronimo!", likesCount: 1 },
 		{ id: 3, message: "la kukaracha", likesCount: 0 },
-		{ id: 4, message: "wilson poni", likesCount: 4 },
-		{ id: 5, message: "karamba!", likesCount: 5 }
 	],
 	profile: null,
 	status: ""
@@ -42,13 +40,13 @@ const profileReducer = (state = initialState, action) => {
 			return state;
 	}
 };
-//action POST==========================================================
+//action POST
 export const addPostActionCreator = (newPostText) => ({ type: ADD_POST, newPostText });
 export const setUserProfile = (profile) => ({ type: SET_USER_PROFILE, profile });
 export const setStatus = (status) => ({ type: SET_STATUS, status });
 export const deletePost = (id) => ({ type: DELETE_POST, id });
 
-//thunk-функция===========================================================
+//thunk
 export const getUserProfile = (userId) => async (dispatch) => {
 	let response = await usersAPI.getProfile(userId);
 	dispatch(setUserProfile(response.data));

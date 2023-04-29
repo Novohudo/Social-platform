@@ -10,7 +10,7 @@
 .profile{
 	font-size:large ;
 	font-family:Arial, Helvetica, sans-serif;
-	color: gold;
+	color: #ff0015;
 }
 .profile li{
 	margin-top: 15px;
@@ -20,20 +20,24 @@
 	font-family: "Times New Roman", Times, serif;
 	display: flex;
 	flex-direction: column;
-	padding: 7px;
-	/* padding-left: 10px; */
+	align-items: center;
+	height: 94%;
+	width: 50%;
+	margin-top: 1.5em;
+	margin-left: 12em;
 }
 .post p {
 	font-size: 20px;
 	font-weight: 600;
 }
 
-.post textarea {
+.post input {
 	margin-top: 10px;
-	width: 300px;
-	height: 160px;
-	background-color: rgba(18, 0, 32, 0.288);
-	border-radius: 10px;
+	width: 500px;
+	height:60px;
+	border: none;
+	box-shadow: 0 0 4px black;
+
 }
 
 .item__intro {
@@ -45,11 +49,9 @@
 	transition-duration: 2s;
 	width: 130px;
 	height: 40px;
-	border-radius: 10px;
-	background-color: rgba(18, 0, 32, 0.288);
-	font-weight: 600;
-	margin-top: 5px;
-	color: gold;
+	margin-top: 1em;
+	letter-spacing: 2px;
+	color: #ff0000;
 }
 .sendButton:hover {
 	background-color: rgb(10, 10, 10);

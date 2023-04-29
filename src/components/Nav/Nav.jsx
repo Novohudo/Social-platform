@@ -51,16 +51,6 @@ const Nav = ({ sidebar }) => {
      Music
     </NavLink>
    </div>
-   <div className={s.item}>
-    <NavLink
-     to="/Settings"
-     className={({ isActive }) => (isActive ? s.active : "")}
-    >
-     Settings
-    </NavLink>
-
-   </div>
-
    <div className={s.friends}>
     <p>Friends</p>
     {friendData}

@@ -1,16 +1,15 @@
 
-
-
-
 ::-webkit-scrollbar {
   /*display: none;*/
 }
 .usersWrapper{
-  background-color: rgba(0, 0, 0, 0.171);
   border-radius:  25px;
   height: 100vh;
-  width:186vh;
+  width:99%;
   overflow: auto;
+      border: 1px solid rgb(0, 0, 0);
+      box-shadow: 0 0 9px 2px #070000;
+      margin: 3px;
  
 }
 .h1{
@@ -33,10 +32,10 @@
   display: flex;
   justify-content: space-between;
   padding: 2px;
+
   
 }
 .firstBlock{
-  
   padding: 5px;
   background-color:rgba(0, 0, 0, 0.31);
   border-radius :10px;
@@ -68,10 +67,10 @@
 .userCountry{
   margin-left: auto;
   padding: 15px;
-  color: gold;
+      color: #ff1900;
 }
 .followButton{
-  color: gold;
+      color: #ff1900;
   border: 0;
   transition-duration: 0.5s;
 	width: 100%;

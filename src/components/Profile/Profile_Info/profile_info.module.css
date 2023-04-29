@@ -1,44 +1,58 @@
-.statusBlock{
-  background-color: rgba(9, 9, 9, 0.247);
-  border-radius: 5px;
-  height: 50px;
-  padding: 5px;
+.statusBlock {
+      height: 50px;
+      padding: 5px;
+      box-shadow: 0 0 4px black;
 }
-.statusBlock:hover{
-  transition-duration: 1s;
-  background-color: rgba(255, 217, 0, 0.511);
-  font-size: large;
-}
-/* ============================================== */
-.profileWrap{
-    display: flex;
-    flex-direction: column;
-    height: 24%;
-    width: 600px;
-}
-.logo{
-    /* grid-area: logo; */
-    margin: 10px;
-  }
 
-  .userInfo{
-    padding-left: 30px;
-    font-size: 20px;
-    font-family:'Times New Roman', Times, serif;
-  }
-  .logo img{
-    /* margin-top: -120px; */
-    width: 250px;
-    height: 300px;
-    border-radius: 20px;
-  }
-  .quote{
-    border-bottom: 1px solid black;
-    margin-left:30px;
-    text-align: center;
-    width: 400px;
-    font-weight: 600;
-   font-size: 15px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
+.statusBlock:hover {
+      transition-duration: 1s;
+      background-color: rgb(255, 255, 255);
+      font-size: large;
+}
+
+/* ============================================== */
+.profileWrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+      width: 300px;
+      margin: 3px;
+}
+
+.logo {
+      text-align: center;
+      box-shadow: 0 0 3px 1px black;
+      margin: 10px;
+      padding: 5px;
+      width: 100%;
+}
+
+.userInfo {
+      width: 100%;
+      padding: 5px;
+      font-size: 20px;
+      font-family: 'Times New Roman', Times, serif;
+      letter-spacing: 1px;
+      /*box-shadow: 0 0 3px black;*/
+
+}
+
+.logo img {
+      width: 250px;
+      height: 300px;
+      box-shadow: 0 0 5px black;
+      border-radius:5px;
+}
+
+.quote {
+      text-align: center;
+      font-size: 12px;
+      box-shadow: 0 0 5px black;
+      margin: 6px;
+      padding: 2px;
+      letter-spacing: 2px;
+      width: 100%;
+
+}
 

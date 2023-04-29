@@ -14,9 +14,9 @@ const UsersContainer = React.lazy(() => import("./components/Users/UsersContaine
 const UsersPageContainer = React.lazy(() => import("./components/Profile/UsersPage/UsersPageContainer "));
 const News = React.lazy(() => import("./components/News/News"));
 const Music = React.lazy(() => import("./components/Music/Music"));
-const Settings = React.lazy(() => import("./components/Settings/Settings"));
 
-//!исправить инициализацию приложения
+
+
 
 const App = (props) => {
  useLayoutEffect(() => {
@@ -34,7 +34,6 @@ const App = (props) => {
       <Route path="profile/:userId" element={<UsersPageContainer />} />
       <Route path="/news/*" element={<News />} />
       <Route path="/music/*" element={<Music />} />
-      <Route path="/settings/*" element={<Settings />} />
       <Route path="/users/*" element={<UsersContainer />} />
       <Route path="/login/*" element={<Login />} />
      </Routes>

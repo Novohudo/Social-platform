@@ -1,7 +1,6 @@
 import s from "./profile_info.module.css";
-import alex from "../../../img/alex.jpeg";
+import alex from "../../../img/alex.jpg";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
-import Preloader from "../../common/Preloader";
 
 const profile_info = ({ status, updateStatus }) => {
 
@@ -21,7 +20,7 @@ const profile_info = ({ status, updateStatus }) => {
      Date of birth: 22.05.1991.<br></br>
      City:Kiev.<br></br>
      Education:Farmer-alcoholic.<br></br>
-     Web-site:<a href="https://www.google.com">Link</a>
+     Web-site:<a href="https://portfolio-qetd4qzu2-novohudo.vercel.app/">Link</a>
     </p>
    </div>
    <div className={s.quote}>

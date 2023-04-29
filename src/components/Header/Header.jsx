@@ -2,7 +2,7 @@ import React from "react";
 import s from "../Header.module.css";
 import pngegg from "../../img/pngegg.png";
 import { NavLink } from "react-router-dom";
-import alex from "../../img/alex.jpeg";
+import alex from "../../img/alex.jpg";
 
 const Header = ({ isAuth, login, logout }) => {
 

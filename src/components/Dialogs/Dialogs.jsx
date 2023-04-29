@@ -21,12 +21,12 @@ const Dialogs = ({ dialogsPage, messagePostAction }) => {
  };
 
  return (
-  // диалоги
+
   <div className={s.dialogs}>
    <div className={s.dialogs__items}>
     <div className={s.dialog}>{dialogsElements}</div>
    </div>
-   {/* сообщения         */}
+
    <div className={s.messages}>
     {messageElements}
     <AddMessageForm onSubmit={addNewMessage} />

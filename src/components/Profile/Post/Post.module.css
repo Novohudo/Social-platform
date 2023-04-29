@@ -1,21 +1,22 @@
 
   .posts{
-    width: 400px;
+    width: 800px;
     padding-top: 10px;
   }
   .posts img{
-    
     width: 60px;
     height: 60px;
     border-radius:100%;
   }
   .posts__com{
     display: flex;
-    background-color: rgba(18, 0, 32, 0.288);
-    border-radius: 10px;
+    justify-content: space-around;
+    background-color: rgb(254, 255, 255);
+    padding: 3px;
+    box-shadow: 0 0 4px black;
   }
   .posts__com span{
     padding-left:8px;
     padding-right: 4px;
-    color: blue;
+    color: #ff0000;
   }
