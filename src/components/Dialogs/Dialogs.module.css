@@ -83,6 +83,7 @@ textarea {
       margin-top: 5px;
       color: #ff1900;
       letter-spacing: 2px;
+      box-shadow: 0 0 4px black;
 }
 
 .dialogsButton:hover {

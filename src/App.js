@@ -1,12 +1,13 @@
 import { getAuthUserData } from "./redux/auth-reducer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import React, { useLayoutEffect } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { connect, Provider } from "react-redux";
 import store from "./redux/redux-store";
 import "./App.css";
 import NavContainer from "./components/Nav/NavContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import Login from "./Login/Login";
+import Loader from "./utilites/Loader";
 
 const DialogsContainer = React.lazy(() => import("./components/Dialogs/DialogsContainer"));
 const ProfileContainer = React.lazy(() => import("./components/Profile/ProfileContainer"));
@@ -24,7 +25,7 @@ const App = (props) => {
    <HeaderContainer />
    <NavContainer />
    <div className="App_wrapper__content">
-    <React.Suspense fallback={<div>Loading...</div>}>
+    <React.Suspense fallback={<div style={{ margin: "0 auto" }}>Loading...</div>}>
      <Routes>
       <Route path="/dialogs/*" element={<DialogsContainer />} />
       <Route path="profile" element={<ProfileContainer />} />
@@ -40,13 +41,28 @@ const App = (props) => {
  );
 };
 
-//------------for App.test
+
 let AppContainer = connect(null, { getAuthUserData })(App);
 
 export let TestApp = () => {
+ const [onStart, setOnStart] = useState(true);
+ useEffect(() => {
+  const timer = setTimeout(() => {
+   setOnStart(false);
+  }, 2000);
+  return () => clearTimeout(timer);
+ }, []);
  return (<BrowserRouter>
   <Provider store={store}>
-   <AppContainer />
+   {onStart ?
+    <div className={"intro-box"}>
+     <div className={"items-block"}>
+      <p className={"app-name"}>Social Platform</p>
+      <div className={"loader"}><Loader /></div>
+      <p className={"designer"}>designed by Aleksey Umrikhin</p></div>
+    </div>
+    : <AppContainer />}
+
   </Provider>
  </BrowserRouter>);
 };
