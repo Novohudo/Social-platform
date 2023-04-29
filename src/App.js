@@ -15,9 +15,6 @@ const UsersPageContainer = React.lazy(() => import("./components/Profile/UsersPa
 const News = React.lazy(() => import("./components/News/News"));
 const Music = React.lazy(() => import("./components/Music/Music"));
 
-
-
-
 const App = (props) => {
  useLayoutEffect(() => {
   props.getAuthUserData();

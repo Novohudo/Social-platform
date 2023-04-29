@@ -3,28 +3,26 @@
  display: flex;
  flex-direction: row;
  height: 50px;
- margin-left: 30px;
+ justify-content: center;
 }
 .divList li{
- background-color: rgba(0, 0, 0, 0.336);
  margin: 2px;
  text-align: center;
  width: 35px;
  height:35px;
  font-size:25px;
- border: 5px solid rgba(0, 0, 0, 0.082);
+ box-shadow: 0 0 4px black;
  border-radius:100%;
 }
 .divList li:hover{
- color: gold;
+ color: #ff0000;
 }
 .selectedPage{
- color: gold;
+ color: #ff0000;
  font-weight: bold;
-
 }
 .divList button{
- color: gold;
- background-color: rgba(0, 0, 0, 0.336);
+ color: #ff0000;
  border-radius:100%;
+ margin: 3px;
 }

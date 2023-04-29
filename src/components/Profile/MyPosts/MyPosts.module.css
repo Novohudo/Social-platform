@@ -17,7 +17,8 @@
 }
 
 .post {
-	font-family: "Times New Roman", Times, serif;
+	font-family: Bahnschrift, Helvetica, sans-serif;
+font-weight: lighter;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -28,7 +29,6 @@
 }
 .post p {
 	font-size: 20px;
-	font-weight: 600;
 }
 
 .post input {

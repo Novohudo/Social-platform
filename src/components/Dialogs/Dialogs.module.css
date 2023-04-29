@@ -1,12 +1,11 @@
 textarea {
       border: 0;
-      background-color: rgba(0, 0, 0, 0.252);
       width: 98%;
       height: 50px;
       color: #ff1900;
       margin: 7px;
+      box-shadow: 0 0 4px black;
 }
-
 .active {
       color: #ff1900;
 }
@@ -28,6 +27,9 @@ textarea {
       font-size: 20px;
       box-shadow: 0 0 4px black;
       padding: 10px;
+      font-family: Bahnschrift, Helvetica, sans-serif;
+      font-weight: lighter;
+      letter-spacing: 2px;
 }
 
 .dialog a {
@@ -54,7 +56,6 @@ textarea {
 
 .dialogs__items {
       padding: 10px;
-
 }
 
 .messages {
@@ -69,7 +70,7 @@ textarea {
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: rgba(0, 0, 0, 0.155);
+      box-shadow: 0 0 4px black;
       margin-top: 5px;
       padding: 10px;
 }
