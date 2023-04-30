@@ -6,10 +6,10 @@ const News = () => {
  useEffect(() => {
   const fetchNews = async () => {
    try {
-    const response = await fetch("https://newsapi.org/v2/top-headlines?sources=bbc-news&pageSize=20&apiKey=2af82ba10a2441b595ea3d49af5c061e");
+    const apiKey = "2af82ba10a2441b595ea3d49af5c061e";
+    const response = await fetch(`https://newsapi.org/v2/top-headlines?sources=bbc-news&pageSize=20&apiKey=${apiKey}`);
     const data = await response.json();
     setNews(data.articles);
-
    } catch (error) {
     console.log("Error fetching", error);
    }
@@ -31,7 +31,6 @@ const News = () => {
     ))}
    </div>
   </div>
-
  );
 };
 
