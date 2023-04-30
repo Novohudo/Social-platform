@@ -19,7 +19,7 @@ const profile_info = ({ status, updateStatus }) => {
      Alex Umrikhin<br></br>
      Date of birth: 22.05.1991.<br></br>
      City:Kiev.<br></br>
-     Education:Farmer-alcoholic.<br></br>
+     Education:journalist.<br></br>
      Web-site:<a href="https://portfolio-qetd4qzu2-novohudo.vercel.app/">Link</a>
     </p>
    </div>

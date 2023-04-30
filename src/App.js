@@ -62,7 +62,6 @@ export let TestApp = () => {
       <p className={"designer"}>designed by Aleksey Umrikhin</p></div>
     </div>
     : <AppContainer />}
-
   </Provider>
  </BrowserRouter>);
 };
