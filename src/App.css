@@ -8,7 +8,6 @@
   grid-template-columns: 200px 7fr;
   height: 100vh;
   background-color: rgba(185, 185, 185, 0);
-
 }
 
 .loader-box {
@@ -96,6 +95,27 @@
   letter-spacing: 3px;
   text-align: center;
 }
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}
+
+
+
 
 
 

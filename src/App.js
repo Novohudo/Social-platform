@@ -1,5 +1,5 @@
 import { getAuthUserData } from "./redux/auth-reducer";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes ,useLocation} from "react-router-dom";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { connect, Provider } from "react-redux";
 import store from "./redux/redux-store";
@@ -8,6 +8,7 @@ import NavContainer from "./components/Nav/NavContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import Login from "./Login/Login";
 import Loader from "./utilites/Loader";
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 const DialogsContainer = React.lazy(() => import("./components/Dialogs/DialogsContainer"));
 const ProfileContainer = React.lazy(() => import("./components/Profile/ProfileContainer"));
@@ -20,21 +21,33 @@ const App = (props) => {
  useLayoutEffect(() => {
   props.getAuthUserData();
  }, []);
+
+ const location = useLocation();
+
+
  return (
   <div className="App_wrapper">
    <HeaderContainer />
    <NavContainer />
    <div className="App_wrapper__content">
-    <React.Suspense fallback={<div style={{ margin: "0 auto" }}>Loading...</div>}>
-     <Routes>
-      <Route path="/dialogs/*" element={<DialogsContainer />} />
-      <Route path="profile" element={<ProfileContainer />} />
-      <Route path="profile/:userId" element={<UsersPageContainer />} />
-      <Route path="/news/*" element={<News />} />
-      <Route path="/music/*" element={<Music />} />
-      <Route path="/users/*" element={<UsersContainer />} />
-      <Route path="/login/*" element={<Login />} />
-     </Routes>
+    <React.Suspense fallback={<div style={{ margin: "0 auto" }}>{Loader}</div>}>
+     <TransitionGroup>
+      <CSSTransition
+       key={location.pathname}
+       classNames="fade"
+       timeout={300}
+      >
+       <Routes location={location}>
+        <Route path="/dialogs/*" element={<DialogsContainer />} />
+        <Route path="profile" element={<ProfileContainer />} />
+        <Route path="profile/:userId" element={<UsersPageContainer />} />
+        <Route path="/news/*" element={<News />} />
+        <Route path="/music/*" element={<Music />} />
+        <Route path="/users/*" element={<UsersContainer />} />
+        <Route path="/login/*" element={<Login />} />
+       </Routes>
+      </CSSTransition>
+     </TransitionGroup>
     </React.Suspense>
    </div>
   </div>
@@ -62,6 +75,7 @@ export let TestApp = () => {
       <p className={"designer"}>designed by Aleksey Umrikhin</p></div>
     </div>
     : <AppContainer />}
+
   </Provider>
  </BrowserRouter>);
 };

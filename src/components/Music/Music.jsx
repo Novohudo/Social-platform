@@ -1,5 +1,6 @@
+import React, { useEffect, useState } from "react";
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import s from "./Music.module.css";
-import { useEffect, useState } from "react";
 import radio from "../../img/radio.svg";
 
 const Music = () => {
@@ -25,6 +26,7 @@ const Music = () => {
   setCurrentStation(station);
   setIsPlaying(true);
  };
+
  const handleStop = () => {
   setCurrentStation(null);
   setIsPlaying(false);
@@ -32,17 +34,20 @@ const Music = () => {
 
  return (
   <div className={s.container}>
-   <h2>Stations</h2>
-   <ul className={s.stations}>
+   <h2>Stations List</h2>
+   <hr />
+   <TransitionGroup component="ul" className={`${s.stations} fade`}>
     {stations.map((station) => (
-     <li key={station.id}>
-      <button onClick={() => handlePlay(station)}>
-       {station.name}
-       <img src={radio} alt={"..."} />
-      </button>
-     </li>
+     <CSSTransition key={station.id} timeout={300} classNames="fade">
+      <li>
+       <button onClick={() => handlePlay(station)}>
+        {station.name}
+        <img src={radio} alt={"..."} />
+       </button>
+      </li>
+     </CSSTransition>
     ))}
-   </ul>
+   </TransitionGroup>
    {currentStation && (
     <div className={s.player}>
      <h3>Now Playing: {currentStation.name}</h3>
