@@ -19,16 +19,16 @@ const News = () => {
  return (
   <div className={s.container}>
    <h2>BBC News</h2>
-   <hr/>
+   <hr />
    <div className={s.items_row}>
-   {news.map((item)=>(
-    <div className={s.items} key={item.url}>
-     <h3>{item.title}</h3>
-     <p>{item.description}</p>
-     <img src={item.urlToImage} alt={"ups.."}/>
-     <a href={item.url} target={"_blank"} rel={"noopener noreferrer"}>more</a>
-    </div>
-   ))}
+    {news.map((item) => (
+     <div className={s.items} key={item.url}>
+      <h3>{item.title}</h3>
+      <p>{item.description}</p>
+      <img src={item.urlToImage} alt={"ups.."} />
+      <a href={item.url} target={"_blank"} rel={"noopener noreferrer"}>more</a>
+     </div>
+    ))}
    </div>
   </div>
 

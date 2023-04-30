@@ -1,0 +1,64 @@
+
+.container {
+      border: 1px solid rgb(0, 0, 0);
+      box-shadow: 0 0 9px 2px #070000;
+      padding: 10px;
+      margin: 3px;
+      border-radius: 10px;
+      height: 100vh;
+      transition-duration: 1s;
+}
+
+.stations {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+}
+
+.container h2 {
+      text-align: center;
+      font-weight: lighter;
+      letter-spacing: 2px;
+}
+
+.container li {
+      list-style: none;
+}
+
+.container button {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 4px #070000;
+      border: none;
+      background: none;
+      width: 200px;
+      height: 200px;
+      margin: 4px;
+      padding: 10px;
+      text-transform: uppercase;
+}
+
+.container button:hover {
+      box-shadow: 0 0 4px 1px #070000;
+}
+
+.container img {
+      width: 150px;
+}
+
+.player {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      letter-spacing: 2px;
+}
+.player h3{
+      font-weight: lighter;
+}
+
+audio {
+      box-shadow: 0 0 4px 1px #070000;
+      border-radius: 10px;
+}
