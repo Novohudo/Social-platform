@@ -28,6 +28,7 @@ const News = () => {
       <img src={item.urlToImage} alt={"ups.."} />
       <a href={item.url} target={"_blank"} rel={"noopener noreferrer"}>more</a>
      </div>
+
     ))}
    </div>
   </div>
