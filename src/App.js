@@ -20,7 +20,7 @@ const Music = React.lazy(() => import("./components/Music/Music"));
 const App = (props) => {
  useLayoutEffect(() => {
   props.getAuthUserData();
- }, []);
+ });
 
  const location = useLocation();
 

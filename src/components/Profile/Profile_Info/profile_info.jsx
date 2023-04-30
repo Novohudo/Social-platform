@@ -1,6 +1,5 @@
 import s from "./profile_info.module.css";
 import alex from "../../../img/alex.jpg";
-import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
 const profile_info = ({ status, updateStatus }) => {
 
@@ -11,7 +10,6 @@ const profile_info = ({ status, updateStatus }) => {
 
    <div className={s.logo}>
     <img src={alex} alt="ups" />
-    <ProfileStatusWithHooks status={status} updateStatus={updateStatus} />
    </div>
 
    <div className={s.userInfo}>
